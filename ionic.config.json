@@ -1,0 +1,7 @@
+{
+  "name": "camera-preview",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
