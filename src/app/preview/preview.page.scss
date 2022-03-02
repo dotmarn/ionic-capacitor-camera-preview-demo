@@ -1,0 +1,42 @@
+ion-content {
+  --background: transparent !important;
+}
+
+#capture {
+  position: absolute;
+  bottom: 30px;
+  left: calc(50% - 25px);
+  width: 50px;
+  height: 50px;
+  z-index: 99999;
+}
+
+#flip {
+  position: absolute;
+  bottom: 30px;
+  left: calc(50% + 125px);
+  width: 50px;
+  height: 50px;
+  z-index: 99999;
+}
+
+#close {
+  position: absolute;
+  bottom: 30px;
+  left: calc(50% - 175px);
+  width: 50px;
+  height: 50px;
+  z-index: 99999;
+}
+
+#capture::part(native) {
+  border-radius: 30px;
+}
+
+#close::part(native) {
+  border-radius: 30px;
+}
+
+#flip::part(native) {
+  border-radius: 30px;
+}

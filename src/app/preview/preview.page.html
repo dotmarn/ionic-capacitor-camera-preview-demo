@@ -1,0 +1,15 @@
+<ion-content id="content" [fullscreen]="true">
+  <div *ngIf="cameraActive">
+      <ion-button (click)="stopCamera()" expand="block" id="close">
+          <ion-icon slot="icon-only" name="close-circle"></ion-icon>
+      </ion-button>
+
+      <ion-button (click)="captureImage()" expand="block" id="capture">
+          <ion-icon slot="icon-only" name="camera"></ion-icon>
+      </ion-button>
+
+      <ion-button (click)="flipCamera()" expand="block" id="flip">
+          <ion-icon slot="icon-only" name="repeat"></ion-icon>
+      </ion-button>
+  </div>
+</ion-content>
