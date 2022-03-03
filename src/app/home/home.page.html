@@ -7,6 +7,9 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <div *ngIf="image">
+    <img [src]="image" alt="" srcset="">
+  </div>
   <ion-button (click)="openCamera()" color="primary" expand="block" fill="solid" size="default">
     Open Camera
   </ion-button>

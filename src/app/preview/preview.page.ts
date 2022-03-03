@@ -21,13 +21,11 @@ export class PreviewPage implements OnInit {
 
   launchCamera() {
     const cameraPreviewOptions: CameraPreviewOptions = {
-      position: 'front',
-      parent: 'content',
+      position: 'front', // front or rear
+      parent: 'content', // the id on the ion-content
       className: '',
-      x: 0,
-      y: 0,
-      width: window.screen.width,
-      height: window.screen.height - 200,
+      width: window.screen.width, //width of the camera display
+      height: window.screen.height - 200, //height of the camera
       toBack: false,
     };
     CameraPreview.start(cameraPreviewOptions);
@@ -45,7 +43,7 @@ export class PreviewPage implements OnInit {
 
   async stopCamera() {
     await CameraPreview.stop();
-    this.modal.dismiss();
+    this.modal.dismiss(this.image);
   }
 
   async flipCamera() {

@@ -8,7 +8,7 @@ import { PreviewPage } from '../preview/preview.page';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
+  image = null;
   constructor(private modal: ModalController) {}
 
   async openCamera() {
@@ -18,12 +18,11 @@ export class HomePage {
       animated: true
     });
 
-    // modal.onDidDismiss().then((data) => {
-    //     if (data !== null) {
-    //         this.image = data.data;
-    //         this.frmKyc.get('frontImage').setValue(this.image);
-    //     }
-    // });
+    modal.onDidDismiss().then((data) => {
+        if (data !== null) {
+            this.image = data.data;
+        }
+    });
 
     return await modal.present();
   }
