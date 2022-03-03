@@ -50,4 +50,5 @@ export class PreviewPage implements OnInit {
     await CameraPreview.flip();
   }
 
+
 }
